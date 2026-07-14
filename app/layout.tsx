@@ -33,10 +33,10 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         <Providers>
           <Sidebar />
+          {/* Only reserves room for the fixed sidebar. Width/padding now live on
+              each section, so the hero can run full-bleed. */}
           <div className="lg:pl-72">
-            <main className="mx-auto max-w-6xl px-6 py-16 sm:px-10">
-              {children}
-            </main>
+            <main>{children}</main>
           </div>
         </Providers>
       </body>

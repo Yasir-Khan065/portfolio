@@ -79,7 +79,7 @@ export function Hero() {
     // this section instead of slipping behind the page background.
     <section
       id="home"
-      className="relative isolate flex min-h-screen scroll-mt-8 flex-col items-center justify-center overflow-hidden py-24 text-center"
+      className="relative isolate flex h-screen scroll-mt-8 flex-col items-center justify-center overflow-hidden py-24 text-center"
     >
       <Image
         src="/images/office.jpg"
@@ -95,7 +95,7 @@ export function Hero() {
 
       {/* This section always sits on a dark image, so its text uses the fixed
           sidebar tokens rather than the theme-following ones. */}
-      <p className="text-sm font-medium uppercase tracking-[0.2em] text-sidebar-muted">
+      <p className="text-sm font-medium uppercase tracking-[0.2em] text-sidebar-fg">
         Welcome
       </p>
 
@@ -108,7 +108,7 @@ export function Hero() {
         )}
       </h1>
 
-      <p className="mt-6 text-sidebar-muted">Based in Islamabad, Pakistan.</p>
+      <p className="mt-6 text-sidebar-fg">Based in Islamabad, Pakistan.</p>
 
       <a
         href="#contact"

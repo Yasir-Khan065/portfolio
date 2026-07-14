@@ -10,6 +10,11 @@
   --border: #E7E5E4;
   --accent: #2EC4A0;
 
+  /* Darker accent for filled buttons carrying white text. White on --accent is
+     only 2.21:1; on this it measures 4.57:1, clearing the 4.5:1 AA minimum.
+     Fixed (identical in both blocks) so the guarantee can't drift with theme. */
+  --accent-strong: #12856B;
+
   /* Sidebar is a fixed brand surface: these are intentionally identical in
      :root and .dark so it stays dark charcoal regardless of theme. */
   --sidebar-bg: #111113;
@@ -27,6 +32,7 @@
   --accent: #3ED8B2;
 
   /* Identical to :root by design — do not theme these. */
+  --accent-strong: #12856B;
   --sidebar-bg: #111113;
   --sidebar-fg: #F4F4F5;
   --sidebar-muted: #8A8A93;
@@ -40,6 +46,7 @@
   --color-muted: var(--muted);
   --color-border: var(--border);
   --color-accent: var(--accent);
+  --color-accent-strong: var(--accent-strong);
   --color-sidebar-bg: var(--sidebar-bg);
   --color-sidebar-fg: var(--sidebar-fg);
   --color-sidebar-muted: var(--sidebar-muted);
