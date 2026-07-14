@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# reference template screenshots (commercial template assets — keep out of the repo)
+docs/ui-reference/
