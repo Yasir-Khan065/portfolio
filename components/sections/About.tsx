@@ -29,7 +29,7 @@ export function About() {
   return (
     <section
       id="about"
-      className="mx-auto min-h-screen max-w-6xl scroll-mt-8 px-6 py-24 sm:px-10"
+      className="mx-auto max-w-6xl scroll-mt-8 px-6 py-20 sm:px-10"
     >
       <SectionHeading watermark="ABOUT ME" title="Know Me More" />
 

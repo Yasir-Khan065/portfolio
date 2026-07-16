@@ -7,10 +7,10 @@ export function SectionHeading({ watermark, title }: SectionHeadingProps) {
   return (
     // `isolate` creates a stacking context so the watermark's negative z-index
     // stays behind the title but never slips behind the page background itself.
-    <div className="relative isolate flex flex-col items-center py-8 text-center">
+    <div className="relative isolate flex flex-col items-center overflow-hidden py-8 text-center">
       <span
         aria-hidden="true"
-        className="pointer-events-none absolute left-1/2 top-1/2 -z-10 -translate-x-1/2 -translate-y-1/2 select-none whitespace-nowrap text-7xl font-bold uppercase tracking-tight text-foreground opacity-[0.04] sm:text-8xl"
+        className="pointer-events-none absolute left-1/2 top-1/2 -z-10 -translate-x-1/2 -translate-y-1/2 select-none whitespace-nowrap text-8xl font-bold uppercase tracking-tight text-foreground opacity-[0.04] sm:text-9xl"
       >
         {watermark}
       </span>

@@ -29,8 +29,8 @@ export function Skills() {
   return (
     // The section background sits on the full-width element so it runs edge to
     // edge; the max-width constraint lives on the inner div.
-    <section id="skills" className="scroll-mt-8 bg-background py-24">
-      <div className="mx-auto min-h-screen max-w-6xl px-6 sm:px-10">
+    <section id="skills" className="scroll-mt-8 bg-background py-20">
+      <div className="mx-auto max-w-6xl px-6 sm:px-10">
         <SectionHeading watermark="SERVICES" title="What I Do?" />
 
         <div className="mt-16 grid gap-10 md:grid-cols-2">

@@ -3,6 +3,9 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./providers";
 import { Sidebar } from "@/components/layout/Sidebar";
+import { MobileNav } from "@/components/layout/MobileNav";
+import { Footer } from "@/components/layout/Footer";
+import { ScrollToTopButton } from "@/components/layout/ScrollToTopButton";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,11 +36,17 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         <Providers>
           <Sidebar />
+          <MobileNav />
           {/* Only reserves room for the fixed sidebar. Width/padding now live on
               each section, so the hero can run full-bleed. */}
-          <div className="lg:pl-72">
-            <main>{children}</main>
+          {/* bg-background gives all content after the Hero a solid, opaque
+              backdrop so the Hero's dark photo edge can't bleed through the
+              transparent sections at the seam. */}
+          <div className="lg:pl-64">
+            <main className="bg-background">{children}</main>
+            <Footer />
           </div>
+          <ScrollToTopButton />
         </Providers>
       </body>
     </html>

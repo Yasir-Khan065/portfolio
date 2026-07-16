@@ -9,6 +9,7 @@
   --muted: #78716C;
   --border: #E7E5E4;
   --accent: #2EC4A0;
+  --error: #DC2626;
 
   /* Darker accent for filled buttons carrying white text. White on --accent is
      only 2.21:1; on this it measures 4.57:1, clearing the 4.5:1 AA minimum.
@@ -30,6 +31,7 @@
   --muted: #A1A1AA;
   --border: #27272A;
   --accent: #3ED8B2;
+  --error: #F87171;
 
   /* Identical to :root by design — do not theme these. */
   --accent-strong: #12856B;
@@ -47,6 +49,7 @@
   --color-border: var(--border);
   --color-accent: var(--accent);
   --color-accent-strong: var(--accent-strong);
+  --color-error: var(--error);
   --color-sidebar-bg: var(--sidebar-bg);
   --color-sidebar-fg: var(--sidebar-fg);
   --color-sidebar-muted: var(--sidebar-muted);
@@ -75,4 +78,17 @@ body {
    visitor prefers reduced motion, so this never animates for them. */
 .typewriter-caret {
   animation: blink 1.1s step-end infinite;
+}
+
+/* Honor prefers-reduced-motion globally: collapse animations and transitions
+   (e.g. the mobile drawer slide, scroll-to-top fade) to effectively instant. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

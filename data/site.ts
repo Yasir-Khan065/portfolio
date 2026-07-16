@@ -13,6 +13,12 @@ export const site = {
   },
 };
 
+export const contact = {
+  location: "Islamabad, Pakistan",
+  email: "yasirahmadkhan82@gmail.com",
+  phones: ["+92 342 0650323", "+92 370 0650323"],
+};
+
 export const navItems: NavItem[] = [
   { id: "home", label: "Home" },
   { id: "about", label: "About Me" },
