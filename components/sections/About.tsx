@@ -71,10 +71,9 @@ export function About() {
             ))}
           </dl>
 
-          {/* public/resume.pdf does not exist yet — this 404s until it's added. */}
           <a
             href="/resume.pdf"
-            download
+            download="Yasir-Khan-CV.pdf"
             className="mt-8 inline-block rounded-full bg-accent-strong px-8 py-3 font-semibold text-white transition-opacity hover:opacity-90"
           >
             Download CV

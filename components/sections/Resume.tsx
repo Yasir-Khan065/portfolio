@@ -70,10 +70,9 @@ export function Resume() {
       </div>
 
       <div className="mt-16 flex justify-center border-t border-border pt-10">
-        {/* public/resume.pdf does not exist yet — this 404s until it's added. */}
         <a
           href="/resume.pdf"
-          download
+          download="Yasir-Khan-CV.pdf"
           className="inline-flex items-center gap-2 rounded-full bg-accent-strong px-8 py-3 font-semibold text-white transition-opacity hover:opacity-90"
         >
           <Download className="h-4 w-4" aria-hidden="true" />
